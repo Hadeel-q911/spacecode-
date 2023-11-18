@@ -1,0 +1,265 @@
+
+/*header , footer*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Styles for the header/navbar */
+header {
+  background-color: #140b49;
+  padding: 0 0;
+  justify-content: space-between;
+  
+}
+
+.logo1 {
+  display: flex;
+  align-items: center; /* Vertically align the logo with the nav links */
+}
+
+.logo1 img {
+  max-width: 100px; /* Adjust the max-width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add margin for spacing */
+}
+
+header .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; 
+  text-align: center;
+  position: absolute;
+  bottom: 780px;
+  left: 600px;
+}
+
+header .nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+header .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.search-bar {
+  display: inline-block;
+  margin-left: 10px; 
+  position: absolute;
+bottom: 780px;
+right: 16px;
+
+
+}
+
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  background-color: #8a85bc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+/* Styles for the banner */
+.banner {
+  background-image: url(image/b96c2f6e-ae02-4985-ac4f-5ac944802c1b.jpeg);
+  color: #fff;
+  padding: 80px;
+  text-align: center;
+  margin-bottom: 10%;
+  max-width: 100%;
+width: 100%;
+height: auto;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+overflow: hidden;
+border-radius: 0 0 85% 85% / 30%;
+
+
+}
+.banner h1{
+  text-align: left;
+}
+
+.banner h2, .banner p{
+  font-style: italic;
+  text-align: justify;
+  font-size: 20px;
+  
+}
+footer{
+  background: #140b49;
+  padding: 1.875rem 0;
+  min-height: 0.063rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+ 
+.footer-container{
+  margin-right: 50%;
+  max-width: 81.25rem;
+  padding: 0 0.938rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #f1eeee;
+}
+
+.left-col { /* Add this class for styling the left column */
+  text-align: left; /* Align text to the left */
+  flex: 1; /* Take up available space on the left */
+}
+
+.footer-container h1{
+  font-size:  1.625rem;
+  text-align: left;
+}
+
+.footer-container p{
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+  text-align: left;
+}
+
+
+.right-col h1{
+  font-size: 1.625rem;
+}
+ 
+
+ 
+@media screen and (max-width:960px) {
+  .footer-container{
+    max-width: 37.5rem;
+  }
+  .right-col{
+    width: 100%;
+    margin-bottom: 3.75rem;
+  }
+
+
+  .left-col{
+      width: 100%;
+      text-align: left;
+    }
+  }
+        .rate {
+            float: left;
+            height: 2.875rem;
+            padding: 0 0.625;
+        }
+        .rate:not(:checked) > input {
+            position:absolute;
+            top:-624.938rem;
+        }
+        .rate:not(:checked) > label {
+            float:right;
+            width:1em;
+            overflow:hidden;
+            white-space:nowrap;
+            cursor:pointer;
+            font-size:1.875rem;
+            color:#ccc;
+        }
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+        .rate > input:checked ~ label {
+            color: #ffc700;    
+        }
+        .rate:not(:checked) > label:hover,
+        .rate:not(:checked) > label:hover ~ label {
+            color: #deb217;  
+        }
+        .rate > input:checked + label:hover,
+        .rate > input:checked + label:hover ~ label,
+        .rate > input:checked ~ label:hover,
+        .rate > input:checked ~ label:hover ~ label,
+        .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+        }
+        #rating {
+        display: flex;
+        flex-direction: row; 
+        }
+        #feedback{
+        display: flex;
+        flex-direction: row; 
+        }
+        textarea{
+            min-height: 8em;
+            min-width:50%;
+            padding: 0.5em;
+            border:1px solid black;
+            background-color:#E5F1FA ;
+            margin-top:1.5em;
+            }
+            fieldset{
+                background-color: white;
+                padding: 20px;
+                margin: 0 auto;
+                max-width: 80%;
+                margin-bottom: 1em;
+                padding: 1em;
+                box-shadow: 0 0 0.938rem lightgray;
+                border:4em;
+               
+            }
+            input{
+            padding: 0.5em;
+            border:solid 0.063rem;
+            }
+            #rating #feedback{
+                text-align: left;
+                }
+             .course-list h2 {
+                text-align: center;
+                text-decoration-color: #140b49;
+             } 
+             .breadcrumb {
+
+              margin-left: 10px; 
+              color: #ececef;
+              background-color: #fff ;
+              background-size: cover;
+             padding: 0 0;
+             margin-top: 100px;
+             margin-bottom: 10px;
+             margin-left: 100px;
+             font-size: 15px;
+                    
+             }
+             .breadcrumb a{
+               color: #232a74 ;
+             }
+             
+             .breadcrumb a:hover {
+               text-decoration: underline;
+               color: #727373;
+             }
+             
+             .breadcrumb .separator {
+               margin: 0 5px;
+               color: #676666;
+             }

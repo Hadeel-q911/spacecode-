@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" >
+    <link rel="stylesheet" href="evaluation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Course Evaluation</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo1">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="parent.html">Parent</a></li>
+                <li><a href="SpaceCodeAdmins.html">Admin</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="TutorsPage.html">Tutors</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+    </header> 
+
+    <div class="banner">
+        <h1>It's not just a website<br> It's Space Code!</h1>
+        <p>To unlock the Power of Coding: Inspiring Young Minds
+         to Create and Innovate through Interactive Programming Courses</p>
+    </div>
+    <div class="breadcrumb"> 
+      <a href="index.html"> Home</a>
+        <span class="separator"> > </span>
+        <a href="parent.html">Parent</a>
+        <span class="separator"> > </span>
+        <a href="evaluation.html">Cours evalluation</a>
+       </div>
+    <main>
+        <div class="course-list">
+            <h2> course</h2>
+         
+<form>
+    <fieldset>
+    <label for="course">Select course:</label>
+    <select id="course" name="course">
+        <option value="Scratch">Scratch</option>
+        <option value="python">python</option>
+        <option value="Java">Java</option>
+        <option value="AI">Artificial Intelligence</option>
+        <option value="htmlCSS">HTML and CSS</option>
+        <option value="CSS">CSS</option>
+        <option value="C">C</option>
+        <option value="C#">C#</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Php">Php</option>
+        <option value="Snap">Snap</option>
+    </select>
+</fieldset>
+    <fieldset>
+    <div id="rating">
+    <p >Rating: </p>
+    <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" /> 
+        <label for="star1" title="text">1 star</label>
+      </div>
+    </div>
+    </fieldset>
+    <fieldset>
+    <div>
+    <p>your comment:</p>
+    <textarea rows="10" cols="100"></textarea>
+    </div>
+    <input type="submit" value="Submit">
+    <br>
+    </fieldset>
+    </form>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <h1>Contact Us</h1>
+          <p>Email:<br>SpaceCode@gmail.com</p>
+          <p>Phone:<br> 0505556124</p>
+          <hr>
+          <p class="rights-text">© 2021 Created By <b>FantacyDesigns</b>  All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    </body>
+    </html>
