@@ -5,21 +5,23 @@
   
   #Register{
       text-align: center;
-      color: #04364A;
+      color: #140b49;
   }
   
   /* Add padding to containers */
   .container {
     
-    background-color: #f8f5f5;
+    background-color:#fff;
     border-radius: 5px;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 600px;
     height: 900px;
-    margin-left: 25%;
+    margin-left: 30%;
     margin-bottom: 200px;
-
+    font-family: Poppins ;
+    font-weight: 800;
+  font-size: larger;
   }
   
   /* Full-width input fields */
@@ -39,13 +41,13 @@
   
   /* Overwrite default styles of hr */
   hr {
-    border: 1px solid #166B87;
+    border: 1px solid #140b49;
     margin-bottom: 2%;
   }
   
   /* Set a style for the submit/register button */
   .registerbtn {
-    background-color: #166B87;
+    background-color: #140b49;
     color: white;
     padding: 2% 5%;
     margin: 0.1% 0;
@@ -55,28 +57,6 @@
     opacity: 0.9;
     font-size: medium;
   }
-  .breadcrumb {
-    color: #ececef;
-    background-color: #fff ;
-    background-size: cover;
-    padding: 0 0;
-    margin-bottom: 10px;
-    font-size: 15px;
-   }
-
-   .breadcrumb a{
-     color: #232a74 ;
-   }
-   
-   .breadcrumb a:hover {
-     text-decoration: underline;
-     color: #727373;
-   }
-   
-   .breadcrumb .separator {
-     margin: 0 5px;
-     color: #676666;
-   }
   .registerbtn:hover {
     opacity:1;
   }
@@ -85,7 +65,34 @@
   a {
     color: dodgerblue;
   }
-  
+
+  .prophoto{
+    position: relative;
+    padding: 0;
+  margin-top: -200px;
+   bottom: 500px;
+  }
+  .photopro{
+    background-color: #140b49;
+    color: white;
+    padding: 1% 0.5%;
+    margin: 0.1% 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+    font-size: medium;
+    position: relative;
+    left: 220px;
+    top: -130px;
+
+  }
+  .photopro:hover {
+    opacity:1;
+  }
+  .info{
+   margin-top: -60px;
+  }
   /* Set a grey background color and center the text of the "sign in" section */
 
   /* The Gender */
@@ -95,7 +102,7 @@
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -154,112 +161,117 @@
   /* Styles for the header/navbar */
 
 /*header , footer*/
+
+/*header , footer*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Styles for the header/navbar */
+header {
+  background-color: #140b49;
+  padding: 0 0;
+  justify-content: space-between;
   
-  }
-  
-  /* Styles for the header/navbar */
-  header {
-    background-color: #140b49;
-    padding: 0 0;
-    justify-content: space-between;
-    
-  }
-  
-  .logo1 {
-    display: flex;
-    align-items: center; /* Vertically align the logo with the nav links */
-  }
-  
-  .logo1 img {
-    max-width: 100px; /* Adjust the max-width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Add margin for spacing */
-  }
-  
-  header .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center; 
-    text-align: center;
-    position: absolute;
-    bottom: 780px;
-    left: 600px;
-  }
-  
-  header .nav-links li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  header .nav-links li:last-child {
-    margin-right: 0;
-  }
-  
-  header .nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  .search-bar {
-    display: inline-flex;
-    margin-left: 10px; 
-    position: absolute;
+}
+
+.logo1 {
+  display: flex;
+  align-items: center; /* Vertically align the logo with the nav links */
+}
+
+.logo1 img {
+  max-width: 100px; /* Adjust the max-width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add margin for spacing */
+}
+
+header .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center; 
+  text-align: center;
+  position: absolute;
   bottom: 780px;
-  right: 16px;
+  left: 600px;
+}
+
+header .nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+header .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.search-bar {
+  display: inline-flex;
   
+  margin-left: 10px; 
+  position: absolute;
+bottom: 780px;
+right: 14px;
+padding: 0;
+
+
+}
+
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 8px; 
+}
+
+.search-bar button {
+  background-color: #8a85bc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+
+/* Styles for the banner */
+.banner {
+  background-image: url(image/b96c2f6e-ae02-4985-ac4f-5ac944802c1b.jpeg);
+  color: #fff;
+  padding: 80px;
+  text-align: center;
+  margin-bottom: 10%;
+  max-width: 100%;
+width: 100%;
+height: auto;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+overflow: hidden;
+border-radius: 0 0 85% 85% / 30%;
+
+
+}
+.banner h1{
+  text-align: left;
+}
+
+.banner h2, .banner p{
+  font-style: italic;
+  text-align: justify;
+  font-size: 20px;
   
-  }
-  
-  .search-bar input {
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .search-bar button {
-    background-color: #8a85bc;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  
-  /* Styles for the banner */
-  .banner {
-    background-image: url(image/b96c2f6e-ae02-4985-ac4f-5ac944802c1b.jpeg);
-    color: #fff;
-    padding: 80px;
-    text-align: center;
-    margin-bottom: 10%;
-    max-width: 100%;
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0 0 85% 85% / 30%;
-  
-  
-  }
-  .banner h1{
-    text-align: left;
-  }
-  
-  .banner h2, .banner p{
-    font-style: italic;
-    text-align: justify;
-    font-size: 20px;
-    
-  }
+}
 
   .breadcrumb {
 

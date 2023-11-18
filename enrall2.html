@@ -48,13 +48,15 @@
       <div class="enral">
       <form action="action_page.php">
       <div class="container"> <h1>Course Enrolment</h1> <form>
-         <label for="children">Select Child:</label> 
+         
+        <div class="select">
+        <label for="children">Select Child:</label> 
          <select id="children" name="children"> 
             <option value="child1">Child 1</option> 
             <option value="child2">Child 2</option>
-             <option value="child3">Child 3</option> </select> 
+             <option value="child3">Child 3</option> </select></div>
              <br><br> 
-             <div class="allfilter">
+           <div class="allfilter">
              <div class="Filter"><label for="tutor">Filter by Tutor:</label> <select id="tutor1" name="tutor"> 
               <optgroup label="Manar muath"> <option value="course1"> Scratch </option> 
                 <option value="course2">java</option> </optgroup> 
@@ -63,11 +65,8 @@
                </optgroup>
               
               </div>
-
-              <div class="allfilter">
-             <div class="Filter"><label for="tutor">Filter by Tutor:</label> <select id="tutor2" name="tutor"> </div>
-            
-              <br>
+             <div class="Filter1"><label for="tutor">Filter by Tutor:</label> <select id="tutor2" name="tutor"> </div>
+          
               <div class="prerequisite"><label for="prerequisite">Filter by prerequisite:</label> <select id="prerequisite" name="prerequisite"> 
                  <optgroup label="java script"> <option value="HTML">HTML I</option> 
                    <option value="CSS">CSS</option> </optgroup> 
@@ -76,7 +75,7 @@
                    </optgroup>
                  </select>
                  </div>
-                </div>
+           </div>
                 <br>
              <label for="courses" id="#pcourse">Select Courses:</label>
 
