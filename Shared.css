@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Styles for the header/navbar */
+header {
+    background-color: #140b49;
+    padding: 0 0;
+    justify-content: space-between;
+    
+}
+
+.logo1 {
+    display: flex;
+    align-items: center; /* Vertically align the logo with the nav links */
+}
+
+.logo1 img {
+    max-width: 100px; /* Adjust the max-width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1.25rem; /* Add margin for spacing */
+}
+
+
+header .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; 
+    text-align: center;
+    position: absolute;
+    bottom: 690px;
+    left: 600px;
+}
+
+header .nav-links li {
+    display: inline;
+    margin-right: 1.25rem;
+}
+
+header .nav-links li:last-child {
+    margin-right: 0;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 37.5rem;
+}
+
+.search-bar {
+    display: inline-block;
+    margin-left: 10px; 
+    position: absolute;
+    bottom:685px ;
+    right: 16px;
+}
+
+
+
+.search-bar input {
+    padding: 0.313rem;
+    border: none;
+    border-radius:0.313rem;
+}
+
+.search-bar button {
+    background-color: #8a85bc;
+    color: #fff;
+    border: none;
+    border-radius:0.313rem;
+    padding: 0.313rem 0.525rem;
+    cursor: pointer;
+}
+
+
+/* Styles for the banner */
+.banner {
+    background-image: url(ImagesWeb/Banner1.jpg);
+    color: #fff;
+    padding: 100px;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 85% / 30%;
+
+
+}
+.banner h1{
+    text-align: left;
+}
+
+.banner h2, .banner p{
+    font-style: italic;
+    text-align: justify;
+    font-size: 20px;
+    
+}
+
+.breadcrumb {
+   color: #ececef;
+   background-color: #fff ;
+   background-size: cover;
+   padding: 0 0;
+   margin-bottom: 10px;
+   font-size: 15px;
+          
+   }
+   .breadcrumb a{
+     color: #232a74 ;
+   }
+   
+   .breadcrumb a:hover {
+     text-decoration: underline;
+     color: #727373;
+   }
+   
+   .breadcrumb .separator {
+     margin: 0 5px;
+     color: #676666;
+   }
