@@ -37,9 +37,11 @@ tbody td.c{
 
 
 .Schedule1{
-    width: 100%;
-    
-    justify-content: space-between;
+  padding-top: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
     
 }
 
