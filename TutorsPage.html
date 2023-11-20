@@ -35,6 +35,7 @@
      to Create and Innovate through Interactive Programming Courses</p>
 </div>
 
+
 <div class="breadcrumb"> 
   <a href="index.html"> Home</a>
     <span class="separator"> > </span>
@@ -45,8 +46,39 @@
 
   <article>
 
-<div class="Tutors" >
+<script>
+  function sortTutors() {
+      var container = document.querySelector('.Tutors');
+      var tutors = Array.from(container.getElementsByClassName('tutor'));
 
+      var sortOrder = document.getElementById('sort').value;
+
+      tutors.sort(function (a, b) {
+          var nameA = a.querySelector('.title').textContent.trim().toLowerCase();
+          var nameB = b.querySelector('.title').textContent.trim().toLowerCase();
+
+          if (sortOrder === 'az') {
+              return nameA.localeCompare(nameB);
+          } else {
+              return nameB.localeCompare(nameA);
+          }
+      });
+
+      tutors.forEach(function (tutor) {
+          container.appendChild(tutor);
+      });
+  }
+</script>
+
+    <div class="sort-container">
+      <label for="sort">Sort by:</label>
+      <select id="sort" onchange="sortTutors()">
+          <option value="az">A-Z</option>
+          <option value="za">Z-A</option>
+      </select>
+    </div>
+
+    <div class="Tutors" >
 <div class="tutor">
 <img src="ImagesWeb/teacher7.jpg" alt="Tutor" Style="width: 50%;">
 <div class="container">
