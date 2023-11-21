@@ -53,13 +53,15 @@
     
       
         
-         <div clss="prophoto"><img src="prof-removebg-preview.png" alt="profileimg" width="200" height="200"> </div>
-         <button type="button" class="photopro">Add Photo</button>
+         <div clss="prophoto"><img src="images/prof-removebg-preview.png" alt="profileimg" width="200" height="200"> </div>
+         <input type="file" id="photo" accept="image/*">
          <br>
          <span class="A">
           <br>
           <br>
          <div class="info">
+          <br>
+          <br>
          <label for="name"><b>Kid Name</b></label>
          <input type="text" placeholder="Enter Name" name="name" id="name" required>
          <br>
@@ -67,12 +69,10 @@
          <div class="gender-container">
          <label for="text"> Gender : </label>
 
-         <label class="Gender">Girl 
-          <input type="radio" checked="checked" name="radio">
+         
+          <input type="radio" checked="checked" name="radio" value="Girl"> Girl</input>
           <span class="checkmark"></span>
-         </label>
-         <label class="Gender">Boy
-          <input type="radio" checked="checked" name="radio">
+          <input type="radio" checked="checked" name="radio" value="Boy">Boy</input>
           <span class="checkmark">
 
         </span>
@@ -116,6 +116,6 @@
           </div>
         </div>
       </footer>
-      
+      <script src="register.js" defer></script>
 </body>
 </html>
