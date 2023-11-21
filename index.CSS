@@ -1,6 +1,4 @@
 
-  
-
   .courses{
     display: flex;
     margin-right: 1.25rem;
@@ -24,13 +22,6 @@
   }
 
 
-
-
-
-
-
-
-
   .container {
     padding: 0.125rem 1rem;
     text-align: center;
@@ -44,12 +35,6 @@
     margin-bottom: 1.25rem;
   }
 
-  
-
-
- 
-   
-  
 
   .ReviewsTitle{
     text-align: center;
@@ -67,8 +52,6 @@
     height: 40%;
     border-radius: 0.313rem;
     margin-right: 1.25rem;
-    
-    
   }
   
   .Review:hover {
@@ -91,9 +74,11 @@
     margin-bottom: 1.875rem;
     
   }
+
    .name{
     margin-bottom: 1.25rem;
    }
+
   .rtext{
     margin-bottom: 1.875rem;
   }
@@ -112,7 +97,6 @@
         margin-top: 1.875rem;
         color:#140b49;
         margin-bottom: 1.875rem;
-
   }
   
 
