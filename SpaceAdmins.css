@@ -86,3 +86,9 @@ ul li {
     color: #64CCC5 ;
 }
 
+.read-more-btn {
+	color :#140b49 ;
+}
+
+.read-more-text {display :none;}
+.read-more-text--show {display :inline;}
