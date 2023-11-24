@@ -40,32 +40,21 @@
     </nav>
   </header>
 
-    <script>
-       const menuBtn = document.querySelector(".menu-icon span");
-       const searchBtn = document.querySelector(".search-icon");
-       const cancelBtn = document.querySelector(".cancel-icon");
-       const items = document.querySelector(".nav-items");
-       const form = document.querySelector("form");
-       menuBtn.onclick = ()=>{
-         items.classList.add("active");
-         menuBtn.classList.add("hide");
-         searchBtn.classList.add("hide");
-         cancelBtn.classList.add("show");
-       }
-       cancelBtn.onclick = ()=>{
-         items.classList.remove("active");
-         menuBtn.classList.remove("hide");
-         searchBtn.classList.remove("hide");
-         cancelBtn.classList.remove("show");
-         form.classList.remove("active");
-         cancelBtn.style.color = "#8a85bc";
-       }
-       searchBtn.onclick = ()=>{
-         form.classList.add("active");
-         searchBtn.classList.add("hide");
-         cancelBtn.classList.add("show");
-       }
-    </script>
+            <ul class="nav-links">
+                <li><a href="parent.html">Parent</a></li>
+                <li><a href="SpaceCodeAdmins.html">Admin</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="TutorsPage.html">Tutors</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+      </div>
+
+
+    </header>
 
      <div class="banner">
         <h1>It's not just a website<br> It's Space Code!</h1>
@@ -80,11 +69,11 @@
        </div>
 
 
-  <main onload="mFunction()">
-    <p id="date"></p>
+  <main>
+    <h2 id="currentWeekStartDate"></h2>
   
 <div class="thePage">
-  <h1> Children name </h1>
+  <h1 style="color :#140b49"> Children name </h1>
   <div class="kidsName">
    
    <div class="kids">
@@ -113,7 +102,7 @@
     </div>
    </div> <!-- kidsname -->
 
-     <h1> Courses name </h1>
+     <h1 style="color :#140b49"> Courses name </h1>
   <div class="courses">
    <ul class="CourseTutor">
    <li style="list-style-type:circle;"> <pre> Scratch Programming                       Manar Muath                 name of children: </pre><div class=KidRegister> <ul><li>Soha Saleh</li><li>Khaleed Essam</li><li>Mostafaa Ahmed </li> </ul>   </div>               </li>
@@ -146,7 +135,7 @@
    </ul>  <!-- CourseTutorEnd -->
    </div>  <!-- Courses end -->
        
-   <h1> Tutor name </h1>
+   <h1 style="color :#140b49"> Tutor name </h1>
 
    <div class="tutor">
    <ul class="tutorlist">
@@ -161,8 +150,27 @@
    </div>  <!-- tutor end -->
       </div> <!-- thepage end -->
 
+      <script>
+        function getStartOfWeek(date) {
+          const day = date.getDay(); // Get the day of the week (0 = Sunday, 1 = Monday, ...)
+          const difference = date.getDate() - day; // Calculate the difference to get to Sunday
+          return new Date(date.setDate(difference));
+        }
+      
+        // Get the current date
+        const currentDate = new Date();
+      
+        // Get the start date of the current week
+        const startOfWeek = getStartOfWeek(currentDate);
+      
+        // Format the startOfWeek date as 'Sunday DD Month YYYY'
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedStartDate = startOfWeek.toLocaleDateString('en-US', options);
+      
+        // Display the start date of the current week above the lists
+        document.getElementById('currentWeekStartDate').textContent = `Current Week's Start Date: ${formattedStartDate}`;
+      </script>
    </main>
- <hr>
  <footer>
   <div class="footer-container">
     <div class="left-col">
