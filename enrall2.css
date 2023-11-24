@@ -2,10 +2,11 @@
 
 
   .Courses{
-    display: flex;
+    display: inline-flex;
     padding: 10px;
     margin-right: 20px;
     margin-left: 20px;
+    width: 500px;
 }
 
 .course{
@@ -22,6 +23,7 @@
     text-align: center;
     background-color: #fff;
     font-weight: bold;
+   
 }
 
 .enral {
@@ -32,7 +34,8 @@
   align-items: center;
   height: 100vh;
   margin: 0;
-  margin-bottom: 10px;
+  margin-top: 190px;
+  margin-bottom: 20%;
   padding-top: -20px;
 }
 .container {
@@ -41,8 +44,9 @@
   padding: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 600px;
-  height: 900px;
-  margin-bottom: 9%;
+  height: 1150px;
+  margin-bottom: 0%;
+  margin-top: 20%;
   font-family: Poppins ;
   font-weight: 800;
 font-size: larger;
@@ -54,7 +58,7 @@ font-size: larger;
   margin-right: 30px;
 }
 .allfilter{
-  display: flex;
+  display: inline-flex;
   margin-right: 100px;
   padding-right: 40px;
 justify-content: space-between;
@@ -66,15 +70,18 @@ justify-content: space-between;
 }
 
 .container select, .container input[type="checkbox"] {
-  display: inline-flex;
-  width: 100%;
+  display: flex;
+  width: 70%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.container input[type="checkbox"] {
+justify-content: flex-start;
+position:relative ;
 
-
+}
 .container input[type="submit"] {
   background-color: #20418e;
   color: white;
