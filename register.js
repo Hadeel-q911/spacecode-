@@ -140,5 +140,5 @@ function getStoredChildNames() {
     }
     // Attach the submitForm function to the form's submit event
     document.getElementById('registrationForm').addEventListener('submit', submitForm);
-form.reset
+    document.getElementById("registrationForm").reset();
 })();
