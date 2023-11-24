@@ -47,34 +47,35 @@
        </div>
 
 
-  <main>
+  <main onload="mFunction()">
+    <p id="date"></p>
+  
 <div class="thePage">
-
   <h1> Children name </h1>
   <div class="kidsName">
    
    <div class="kids">
-    <img src="kid5.jpg" alt="child1" >
+    <img src="images/kid3.png"  alt="child1" >
     <p> Sarah Mohammed </p>
    </div> 
    <div class="kids">
-     <img src="kid4.png" alt="child2" >
+     <img src="images/kid1.png" alt="child2" >
      <p> Saad Mohammed </p>
    </div>
    <div class="kids">
-     <img src="kid1.jpg" alt="child3" >
+     <img src="images/kid5.jpg"  alt="child3" >
      <p> Soha Saleh </p>
     </div>
     <div class="kids">
-     <img src="kid6.jpg" alt="child4" >
+     <img src="images/kid2.png"  alt="child4" >
      <p> Khaleed Essam </p>
     </div>
     <div class="kids">
-     <img src="kid7.jpg" alt="child5" >
+     <img src="images/kid7.jpg" alt="child5" >
      <p> Mostafaa Ahmed </p>
     </div>
     <div class="kids">
-     <img src="kid2.jpg" alt="child6" >
+     <img src="images/kid2.jpg" alt="child6" >
      <p> Halah Abdullah </p>
     </div>
    </div> <!-- kidsname -->
@@ -82,13 +83,32 @@
      <h1> Courses name </h1>
   <div class="courses">
    <ul class="CourseTutor">
-   <li> <pre> Scratch Programming                       Manar Muath                 name of children: </pre><div class=KidRegister> <ul><li>Sarah Mohammed</li><li>Saad Mohammed</li><li>Soha Saleh</li><li>Khaleed Essam</li><li>Mostafaa Ahmed</li>
-     <li><span class="read-more-text"> Assma Saleh <br> Latifah Samer <br> Thamer Fahad</span> <span class="read-more-btn">Read More...</span> <script src="Admin.js"> </script></li>           </ul>   </div>               </li>
-   <li> <pre> Python Coding                             Tamer hussam                name of children: </pre> <ul class=kid2><li>Halah Abdullah</li><li>Sarah Mohammed</li><li>Khaleed Essam</li>                   </ul>                  </li>
-   <li> <pre> CSS                                       Saad Ameer                  name of children: </pre> <ul class=kid2><li>Soha Saleh</li><li>Khaleed Essam</li> <li>Mostafaa Ahmed</li>                   </ul>                   </li>
-   <li> <pre> html and CSS                              Safiah hamad                name of children: </pre> <ul class=kid2><li>Khaleed Essam</li><li>Saad Mohammed</li>                   </ul>                   </li>
-   <li> <pre> Java Programming                          Huda nasser                 name of children: </pre> <ul class=kid2><li> Halah Abdullah</li>                   </ul>                   </li>
-   <li> <pre> Artifical intelligence                    Abdullah Qassim             name of children: </pre>    <ul class=kid2><li>Halah Abdullah</li>                   </ul>                  </li>
+   <li style="list-style-type:circle;"> <pre> Scratch Programming                       Manar Muath                 name of children: </pre><div class=KidRegister> <ul><li>Soha Saleh</li><li>Khaleed Essam</li><li>Mostafaa Ahmed </li> </ul>   </div>               </li>
+   <li style="list-style-type:circle;"> <pre> Python Coding                             Tamer hussam                name of children: </pre> <ul class=kid2><li>Halah Abdullah</li><li>Sarah Mohammed</li><li>Khaleed Essam</li><li>Latifah Samer </li><li> Thamer Fahad <span id="dot1">...</span> </li>
+    <li style="list-style-type: none;"><span id="more2" style="display: none;">Saad Mohammed</span></li> <button onclick="myFunction2()" id="myButtn">Read more</button> <script src="Admin.js"> </script> </ul>                  </li>
+   <li style="list-style-type:circle;"> <pre> CSS                                       Saad Ameer                  name of children: </pre> <ul class=kid2><li>Soha Saleh</li><li>Khaleed Essam</li> <li>Mostafaa Ahmed</li><li>Sarah Mohammed</li><li>Saad Fahad<span id="dots">...</span></li>  
+    <li style="list-style-type: none;"><span id="more" style="display: none;">Halah Abdullah <br> Khaleed Essam</span></li> <button onclick="myFunction()" id="myBtn">Read more</button></li>                 </ul>                   </li>
+   <li style="list-style-type:circle;"> <pre> html and CSS                              Safiah hamad                name of children: </pre> <ul class=kid2><li>Khaleed Essam</li><li>Saad Mohammed</li>                   </ul>                   </li>
+   <li style="list-style-type:circle;"> <pre> Java Programming                          Huda nasser                 name of children: </pre> <ul class=kid2><li> Halah Abdullah</li>                   </ul>                   </li>
+   <li style="list-style-type:circle;"> <pre> Artifical intelligence                    Abdullah Qassim             name of children: </pre>    <ul class=kid2><li>Halah Abdullah</li><li>Mostafaa Ahmed</li><li>Khaleed Essam</li><li>Latifah Samer </li><li> Soha Saleh  <span id="dot">...</span></li>   
+    <li style="list-style-type: none;"><span id="more1" style="display: none;">Halah Abdullah</span></li> <button onclick="myFunction1()" id="myButn">Read more</button>
+  <script>
+  function myFunction1() {
+    var dots = document.getElementById("dot");
+    var moreText = document.getElementById("more1");
+    var btnText = document.getElementById("myButn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+  </script>  </ul>                  </li>
 
    </ul>  <!-- CourseTutorEnd -->
    </div>  <!-- Courses end -->
