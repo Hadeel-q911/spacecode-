@@ -32,6 +32,13 @@
                       <li><a href="SpaceCodeAdmins.html">Admin</a></li>
                       <li><a href="courses.html">Courses</a></li>
                       <li><a href="TutorsPage.html">Tutours</a></li>
+                      <li><button onclick="myFunction()">dark mode</button></li>
+                      <script>
+                        function myFunction() {
+                           var element = document.body;
+                           element.classList.toggle("dark-mode");
+                        }
+                        </script>
            </div>
            <div class="search-icon">
               <span class="fas fa-search"></span>
@@ -64,7 +71,7 @@
              searchBtn.classList.remove("hide");
              cancelBtn.classList.remove("show");
              form.classList.remove("active");
-             cancelBtn.style.color = "#ff3d00";
+             cancelBtn.style.color = "#8a85bc";
            }
            searchBtn.onclick = ()=>{
              form.classList.add("active");
@@ -241,7 +248,7 @@
   </footer>
 
    
-       
+      
       
            
        
