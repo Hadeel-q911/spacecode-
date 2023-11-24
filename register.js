@@ -70,10 +70,13 @@
         return !isNaN(firstCharacter);
     }
 
-    // Function to store data in local storage
-    function storeData(name) {
-        localStorage.setItem('childName', name);
-    }
+
+  // Function to store data in local storage
+function storeData(name, imageDataUrl) {
+    localStorage.setItem('childName', name);
+    localStorage.setItem('childImage', imageDataUrl);
+}
+
 
     // Function to print child information
     function printChildInformation() {
@@ -117,7 +120,19 @@
             content += '<p><strong>Email:</strong> ' + childemail + '</p>';
 
             printWindow.document.body.innerHTML = content;
-            printWindow.print();
+            var childPhotoElement = printWindow.document.getElementById('childPhoto');
+            if (childPhotoElement.complete) {
+                printWindow.print();
+                printWindow.close();
+                window.history.back();
+            } else {
+                childPhotoElement.onload = function () {
+                    printWindow.print();
+                    
+                
+                }
+               
+            }
         }
     }
 

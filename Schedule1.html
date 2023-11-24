@@ -7,27 +7,65 @@
         <link rel="stylesheet" href="Shared.css">
         <link rel="stylesheet" href="Schedule.css">
         <title>Schdule</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 
 <body>
+    
     <header>
-            <nav>
-                <div class="logo1">
-                    <img src="images/logo.png" alt="Logo">
-                </div>
-        
-                <ul class="nav-links">
-                    <li><a href="parent.html">Parent</a></li>
-                    <li><a href="SpaceCodeAdmins.html">Admin</a></li>
-                    <li><a href="courses.CSS">Courses</a></li>
-                    <li><a href="TutorsPage.html">Tutors</a></li>
-                </ul>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit">Search</button>
-                </div>
-            </nav>
-          </header>
+        <nav>
+           <div class="menu-icon">
+              <span class="fas fa-bars"></span>
+           </div>
+           <div class="logo">
+              <img src="images/logo.png" alt="logo">
+           </div>
+           <div class="nav-items">
+                      <li><a href="parent.html">Parent</a></li>
+                      <li><a href="SpaceCodeAdmins.html">Admin</a></li>
+                      <li><a href="courses.html">Courses</a></li>
+                      <li><a href="TutorsPage.html">Tutours</a></li>
+           </div>
+           <div class="search-icon">
+              <span class="fas fa-search"></span>
+           </div>
+           <div class="cancel-icon">
+              <span class="fas fa-times"></span>
+           </div>
+           <form action="#">
+              <input type="search" class="search-data" placeholder="Search" required>
+              <button type="submit" class="fas fa-search"></button>
+           </form>
+        </nav>
+      </header>
+  
+        <script>
+           const menuBtn = document.querySelector(".menu-icon span");
+           const searchBtn = document.querySelector(".search-icon");
+           const cancelBtn = document.querySelector(".cancel-icon");
+           const items = document.querySelector(".nav-items");
+           const form = document.querySelector("form");
+           menuBtn.onclick = ()=>{
+             items.classList.add("active");
+             menuBtn.classList.add("hide");
+             searchBtn.classList.add("hide");
+             cancelBtn.classList.add("show");
+           }
+           cancelBtn.onclick = ()=>{
+             items.classList.remove("active");
+             menuBtn.classList.remove("hide");
+             searchBtn.classList.remove("hide");
+             cancelBtn.classList.remove("show");
+             form.classList.remove("active");
+             cancelBtn.style.color = "#8a85bc";
+           }
+           searchBtn.onclick = ()=>{
+             form.classList.add("active");
+             searchBtn.classList.add("hide");
+             cancelBtn.classList.add("show");
+           }
+        </script>
           
           <div class="breadcrumb"> 
             <a href="index.html"> Home</a>
@@ -40,7 +78,7 @@
 
 <h3>Schedule T.Sarah Abdullah</h3>
 
-<div class="Schedule1">
+<div class="Schedule1" style="overflow-x:auto;">
 <table>
     <thead>
     <tr>
