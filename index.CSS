@@ -98,3 +98,19 @@ img {
       color:#140b49;
       margin-bottom: 1.875rem;
 }
+
+#icon{
+  width: 50px;
+  cursor: pointer;
+  
+}
+body {
+  background-color: white;
+  color: black;
+ 
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
