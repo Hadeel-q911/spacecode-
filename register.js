@@ -77,49 +77,53 @@ function storeData(name, imageDataUrl) {
     localStorage.setItem('childImage', imageDataUrl);
 }
 
+function getStoredChildNames() {
+    var storedChildNames = localStorage.getItem('childNames');
+    return storedChildNames ? JSON.parse(storedChildNames) : [];
+}
 
     // Function to print child information
     function printChildInformation() {
         // Get form elements
-        var childPhoto = document.getElementById("photo").files[0];
         var childName = document.getElementById("name").value;
         var childdob = document.getElementById("birthday").value;
-        var childgender = document.querySelector('input[name="radio"]:checked').value;
-        var childphone = document.getElementById("Phone").value;
-        var childemail = document.getElementById("email").value;
-
+        var childGender = document.querySelector('input[name="radio"]:checked').value;
+        var childEmail = document.getElementById("email").value;
+        var childPhoneNumber = document.getElementById("Phone").value;
+        var childPhoto = document.getElementById("photo").files[0];
+    
         // Create a new window for printing
         var printWindow = window.open('', '_blank');
+    
         var content = '<div style="border: 1px solid #000; padding: 10px;">';
-
-        // Build the content to be printed
-       // var content = '';
-
+    
         // Display photo if available
         if (childPhoto) {
             var reader = new FileReader();
             reader.onload = function (e) {
-                content += '<p><img src="' + e.target.result + '" alt="Child Photo" style="max-width: 200px;"></p>';
-
-                content += '<p><strong> Child Name:</strong> ' + childName + '</p>';
-                content += '<p><strong>DOB:</strong> ' + childdob + '</p>';
-                content += '<p><strong>Gender:</strong> ' + childgender + '</p>';
-                content += '<p><strong>Phone:</strong> ' + childphone + '</p>';
-                content += '<p><strong>Email:</strong> ' + childemail + '</p>';
-
-                printWindow.document.body.innerHTML = content;
-                printWindow.print();
+                content += ' <img id="childPhoto" src="' + e.target.result + '" alt="Child Photo" style="max-width: 200px;"></p>';
+                // After the photo has loaded, print the rest of the information
+                printRestOfInformation();
             };
             reader.readAsDataURL(childPhoto);
         } else {
-            // If no photo is selected, print without the photo
+            // If no photo is selected, proceed to print the rest of the information
+            printRestOfInformation();
+        }
+    
+        function printRestOfInformation() {
+            // Print the rest of the information
             content += '<p><strong>Name:</strong> ' + childName + '</p>';
             content += '<p><strong>DOB:</strong> ' + childdob + '</p>';
-            content += '<p><strong>Gender:</strong> ' + childgender + '</p>';
-            content += '<p><strong>Phone:</strong> ' + childphone + '</p>';
-            content += '<p><strong>Email:</strong> ' + childemail + '</p>';
-
+            content += '<p><strong>Gender:</strong> ' + childGender + '</p>';
+            content += '<p><strong>Phone Number:</strong> ' + childPhoneNumber + '</p>';
+            content += '<p><strong>Email:</strong> ' + childEmail + '</p>';
+            content += '</div>';
+    
+            // Set the content and print the window after the image has loaded
             printWindow.document.body.innerHTML = content;
+    
+            // Check if the photo has finished loading
             var childPhotoElement = printWindow.document.getElementById('childPhoto');
             if (childPhotoElement.complete) {
                 printWindow.print();
@@ -128,14 +132,13 @@ function storeData(name, imageDataUrl) {
             } else {
                 childPhotoElement.onload = function () {
                     printWindow.print();
-                    
-                
-                }
-               
+                    printWindow.close();
+                    window.history.back();
+                };
             }
         }
     }
-
     // Attach the submitForm function to the form's submit event
     document.getElementById('registrationForm').addEventListener('submit', submitForm);
+    document.getElementById("registrationForm").reset();
 })();
