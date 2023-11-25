@@ -335,14 +335,12 @@ nav .logo.space{
 
     .left-col{
         width: 100%;
-        text-align: left;
-      }
-    }
+        text-align: left;} }
+   
 
-
-
-    /* Common styles for both themes */
-body {
+    
+     /* Common styles for both themes */
+      body {
   transition: background-color 0.5s, color 0.5s;
 }
 
@@ -350,7 +348,7 @@ h1 {
   color: #333;
 }
 
-button {
+   button {
   background-color: #4caf50;
   color: white;
   border: none;
@@ -378,3 +376,7 @@ body.dark-theme h1 {
 body.dark-theme button {
   background-color: #333;
 }
+
+  
+  
+

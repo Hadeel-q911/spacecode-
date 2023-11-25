@@ -81,11 +81,11 @@
        </div>
 
 
-  <main onload="mFunction()">
-    <p id="date"></p>
+  <main>
+    <h2 id="currentWeekStartDate"></h2>
   
 <div class="thePage">
-  <h1> Children name </h1>
+  <h1 style="color :#140b49"> Children name </h1>
   <div class="kidsName">
    
    <div class="kids">
@@ -114,7 +114,7 @@
     </div>
    </div> <!-- kidsname -->
 
-     <h1> Courses name </h1>
+     <h1 style="color :#140b49"> Courses name </h1>
   <div class="courses">
    <ul class="CourseTutor">
    <li style="list-style-type:circle;"> <pre> Scratch Programming                       Manar Muath                 name of children: </pre><div class=KidRegister> <ul><li>Soha Saleh</li><li>Khaleed Essam</li><li>Mostafaa Ahmed </li> </ul>   </div>               </li>
@@ -147,7 +147,7 @@
    </ul>  <!-- CourseTutorEnd -->
    </div>  <!-- Courses end -->
        
-   <h1> Tutor name </h1>
+   <h1 style="color :#140b49"> Tutor name </h1>
 
    <div class="tutor">
    <ul class="tutorlist">
@@ -162,8 +162,27 @@
    </div>  <!-- tutor end -->
       </div> <!-- thepage end -->
 
+      <script>
+        function getStartOfWeek(date) {
+          const day = date.getDay(); // Get the day of the week (0 = Sunday, 1 = Monday, ...)
+          const difference = date.getDate() - day; // Calculate the difference to get to Sunday
+          return new Date(date.setDate(difference));
+        }
+      
+        // Get the current date
+        const currentDate = new Date();
+      
+        // Get the start date of the current week
+        const startOfWeek = getStartOfWeek(currentDate);
+      
+        // Format the startOfWeek date as 'Sunday DD Month YYYY'
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedStartDate = startOfWeek.toLocaleDateString('en-US', options);
+      
+        // Display the start date of the current week above the lists
+        document.getElementById('currentWeekStartDate').textContent = `Current Week's Start Date: ${formattedStartDate}`;
+      </script>
    </main>
- <hr>
  <footer>
   <div class="footer-container">
     <div class="left-col">
