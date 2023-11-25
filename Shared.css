@@ -258,8 +258,6 @@ nav .logo.space{
 }
 
 .breadcrumb {
-   color: #ececef;
-   background-color: #fff ;
    background-size: cover;
    padding: 0 0;
    margin-bottom: 0.625rem;
@@ -335,7 +333,48 @@ nav .logo.space{
 
     .left-col{
         width: 100%;
-        text-align: left;
-      }
-  }
+        text-align: left;} }
+   
+
+    
+     /* Common styles for both themes */
+      body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+h1 {
+  color: #333;
+}
+
+   button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Light Theme Styles */
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+
+
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+
+body.dark-theme h1 {
+  color: #ccc;
+}
+
+body.dark-theme button {
+  background-color: #333;
+}
+
   
+  
+

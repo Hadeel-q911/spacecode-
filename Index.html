@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <script src="darkmode.js"></script>
+       
         <style>
         .checked {
           color: orange;
@@ -32,13 +34,7 @@
                       <li><a href="SpaceCodeAdmins.html">Admin</a></li>
                       <li><a href="courses.html">Courses</a></li>
                       <li><a href="TutorsPage.html">Tutours</a></li>
-                      <li><button onclick="myFunction()">dark mode</button></li>
-                      <script>
-                        function myFunction() {
-                           var element = document.body;
-                           element.classList.toggle("dark-mode");
-                        }
-                        </script>
+                      <li><button id="toggle-dark-mode">Toggle Dark Mode</button></li>
            </div>
            <div class="search-icon">
               <span class="fas fa-search"></span>

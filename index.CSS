@@ -1,61 +1,69 @@
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
 
-.courses{
+h1 {
+  color: #333;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Courses Section */
+.courses {
   display: flex;
+  flex-wrap: wrap;
   margin-right: 1.25rem;
   margin-left: 1.25rem;
   overflow-x: auto;
-
 }
 
 .courses .course {
-  box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 20%;
+  width: calc(33.33% - 1.25rem); /* Adjusted for responsiveness */
   border-radius: 0.313rem;
-  margin-bottom: 3.125rem;
-  margin-right: 1.25rem;
+  margin-bottom: 1.875rem;
   line-height: 1.25rem;
-  min-width: 20%;
-
- 
-  
+  margin-right: 1.25rem;
 }
-
 
 .container {
   padding: 0.125rem 1rem;
   text-align: center;
 }
 
-.title{
+.title {
   margin-bottom: 0.625rem;
 }
 
-.text{
+.text {
   margin-bottom: 1.25rem;
 }
 
-
-.ReviewsTitle{
+/* Reviews Section */
+.ReviewsTitle {
   text-align: center;
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
-  color:blue;
-
+  color: blue;
 }
 
-
 .Review {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 40%;
-  height: 40%;
+  width: calc(50% - 1.25rem); /* Adjusted for responsiveness */
   border-radius: 0.313rem;
   margin-right: 1.25rem;
 }
 
 .Review:hover {
-  box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -66,24 +74,21 @@ img {
   padding: 0.125rem 1rem;
 }
 
-
-.Reviews{
+.Reviews {
   display: flex;
+  flex-wrap: wrap;
   margin-right: 1.25rem;
   margin-left: 1.25rem;
   margin-bottom: 1.875rem;
-  
 }
 
- .name{
+.name {
   margin-bottom: 1.25rem;
- }
+}
 
-.rtext{
+.rtext {
   margin-bottom: 1.875rem;
 }
-
-
 
 .rate {
   color: grey;
@@ -91,26 +96,35 @@ img {
   margin-bottom: 0.5rem;
 }
 
-
-.coursesTitle{
-     text-align:center;
-      margin-top: 1.875rem;
-      color:blue;
-      margin-bottom: 1.875rem;
+/* Courses Title */
+.coursesTitle {
+  text-align: center;
+  margin-top: 1.875rem;
+  color: blue;
+  margin-bottom: 1.875rem;
 }
 
-#icon{
-  width: 50px;
-  cursor: pointer;
-  
+/* Responsive Media Queries */
+@media screen and (max-width: 767px) {
+  .courses .course {
+      width: 100%; /* Full width on smaller screens */
+      margin-right: 0;
+  }
+
+  .Review {
+      width: 100%; /* Full width on smaller screens */
+      margin-right: 0;
+  }
 }
-body {
-  background-color: white;
-  color: black;
+
+
+
+
+
+
+
+
  
-}
 
-.dark-mode {
-  background-color: black;
-  color: white;
-}
+
+
