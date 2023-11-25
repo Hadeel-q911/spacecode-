@@ -1,19 +1,20 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("content_loaded");
 
-  // Retrieve child's name from local storage
-  var storedChildName = localStorage.getItem("childName");
+  // Retrieve child's names from local storage
+  var storedChildNames = JSON.parse(localStorage.getItem("childNames")) || [];
 
   // Populate the select element for children
   var childrenSelect = document.getElementById("children");
 
-  // If there is a stored child name, add it to the select element
-  if (storedChildName) {
+  // Add stored child names to the select element
+  storedChildNames.forEach(function (name) {
     var option = document.createElement("option");
-    option.value = storedChildName;
-    option.textContent = storedChildName;
+    option.value = name;
+    option.textContent = name;
     childrenSelect.appendChild(option);
-  }
+  });
 
   // Define the courses array
   var courses = [
@@ -179,13 +180,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check if a child is selected
     var selectedChild = childrenSelect.value;
-    if (!selectedChild) {
+    if (!selectedChild || selectedChild.trim() === "") {
       alert("Please select a child.");
       return;
     }
 
+    
+
     // Store the selected child name in local storage
-    localStorage.setItem("childName", selectedChild);
+    //*storedChildNames.push(selectedChild);localStorage.setItem("childNames", JSON.stringify(storedChildNames));
 
     // Check if a course is selected
     var selectedCourses = document.querySelectorAll(
@@ -199,10 +202,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the selected tutor and prerequisite
     var selectedTutor = tutorsFilter.value;
     var selectedPrerequisite = prerequisitesFilter.value;
-
     // Display information on the page
     var informationContainer = document.querySelector(".enral");
-    informationContainer.innerHTML = "<h2>Enrollment Information</h2> <br>";
+    informationContainer.innerHTML = "<h2>Enrollment Information</h2>  <br> <br>";
     informationContainer.innerHTML +=
       "<p>Child Name: " + selectedChild + "</p> ";
     informationContainer.innerHTML += "<p>Selected Courses:</p>";
