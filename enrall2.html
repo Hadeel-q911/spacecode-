@@ -3,6 +3,9 @@
   <title>Course Enrolment</title> 
  <link rel="stylesheet" href="enrall2.css">
  <link rel="stylesheet" href="Shared.css">
+ <style>
+ 
+ </style>
  </head> 
   <body> 
    
@@ -81,7 +84,7 @@
 
 
    <div class="enral">
-   <form >
+   <form id="f" >
    <div class="container"> <h1>Course Enrolment</h1> 
      <div class="select">
      <label for="children">Select Child:</label> 
@@ -116,77 +119,14 @@
           <label for="courses" id="pcourse">Select Courses:</label>
 
           <br>
-          
-           <div class="Courses">
-    
-
-          <label class="course"> <img src="image/scratch (2).png" alt="Course 1" width="100%" height="20%"> 
-           <br><input type="checkbox"  name="checkbox">  Scratch <span class="checkmark"> </span>
-          </label>
-          <br> 
-         
-          <label class="course"> <img src="image/AI (1).png" alt="Course 2" width="100%" height="20%"> 
-             <br>
-           <input type="checkbox"  name="checkbox"> AI
-             <span class="checkmark"></span>
-           </label><br> 
-          
-          <label class="course"><img src="image/swift.png" alt="Course 3" width="100%" height="20%"> 
-            <br> <input type="checkbox"  name="checkbox"> Swift
-           <span class="checkmark"></span>
-           </label>
-          <br> <!-- Add more checkboxes for additional courses --> 
-           </div>
-           
-           <div class="Courses">
-             <label class="course"> <img src="image/htmlcss .png" alt="Course 1" width="100%" height="20%"> 
-             <br><input type="checkbox"  name="checkbox"> Html & Css <span class="checkmark"> </span>
-             </label>
-             <br> 
+          <div class="Course" id="FilterDiv" style="display: flex; flex-wrap: wrap;">
             
-             <label class="course"> <img src="image/php.png" alt="Course 2" width="100%" height="20%"> 
-                
-              <br><input type="checkbox" name="checkbox"> 
-                PHP
-                <span class="checkmark"></span>
-              </label><br> 
-             
-             <label class="course">
-               <img src="image/202729c0-34b4-4191-b5fc-9ac4012ca21c.jpeg" alt="Course 3" width="100%" height="20%"> 
-                
-               <br> 
-               <input type="checkbox"  name="checkbox"> 
-               Python
-              <span class="checkmark"> </span>
-              </label>
-             <br> <!-- Add more checkboxes for additional courses --> 
-             
-              </div>
-
-              <div class="Courses">
-    
-
-                <label class="course"> <img src="images/java.png" alt="Course 1" width="100%" height="20%"> 
-                 <br><input type="checkbox"  name="checkbox">  java <span class="checkmark"> </span>
-                </label>
-                <br> 
-               
-                <label class="course"> <img src="images/JavaScript .png" alt="Course 2" width="100%" height="20%"> 
-                   <br>
-                 <input type="checkbox"  name="checkbox"> JavaScript
-                   <span class="checkmark"></span>
-                 </label><br> 
-                
-                <label class="course"><img src="images/cc.png" alt="Course 3" width="100%" height="20%"> 
-                  <br> <input type="checkbox"  name="checkbox"> C#
-                 <span class="checkmark"></span>
-                 </label>
-                <br> <!-- Add more checkboxes for additional courses --> 
-                 </div>
+          </div>
+        
           <br>
           
            
-            <button type="submit" class="enrallbut">Enrall</button> </div>
+          <button type="submit" class="enrallbut" id="btn">Enroll</button> </div>
      </div>
  </form>
 </div>
@@ -203,7 +143,10 @@
    </div>
  </div>
 </footer>
-<script src="enrall2.js" defer></script>
+
+<script src="./enrall2.js"></script>
+
+
 
      </body>
      </html>

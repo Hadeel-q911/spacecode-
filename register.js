@@ -77,6 +77,10 @@ function storeData(name, imageDataUrl) {
     localStorage.setItem('childImage', imageDataUrl);
 }
 
+function getStoredChildNames() {
+    var storedChildNames = localStorage.getItem('childNames');
+    return storedChildNames ? JSON.parse(storedChildNames) : [];
+}
 
     // Function to print child information
     function printChildInformation() {
@@ -138,4 +142,5 @@ function storeData(name, imageDataUrl) {
 
     // Attach the submitForm function to the form's submit event
     document.getElementById('registrationForm').addEventListener('submit', submitForm);
+form.reset
 })();
