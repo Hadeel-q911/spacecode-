@@ -1,20 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("content_loaded");
 
-  // Retrieve child's name from local storage
-  var storedChildName = localStorage.getItem("childName");
+ 
 
-  // Populate the select element for children
-  var childrenSelect = document.getElementById("children");
+  function adjustContainerHeight() {
+    var container = document.querySelector(".container");
 
-  // If there is a stored child name, add it to the select element
-  if (storedChildName) {
-    var option = document.createElement("option");
-    option.value = storedChildName;
-    option.textContent = storedChildName;
-    childrenSelect.appendChild(option);
+    // Increase the container's height by 100 pixels (adjust as needed)
+    var currentHeight = container.clientHeight;
+    container.style.height = currentHeight + 200 + "px";
   }
-
   // Define the courses array
   var courses = [
     {
@@ -71,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       prerequisite: "Scratch",
       img: "images/cc.png",
     },
-    // Add more courses as needed
+    // ... (Your existing course data)
   ];
 
   // Populate filter options for tutors and prerequisites
@@ -177,6 +172,22 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
+
+// Retrieve children's names from local storage
+var childrenData = JSON.parse(localStorage.getItem("children")) || [];
+
+
+ // Populate the select element for children
+ var childrenSelect = document.getElementById("children");
+
+ // If there is a stored child name, add it to the select element
+ if (storedChildName) {
+   var option = document.createElement("option");
+   option.value = storedChildName;
+   option.textContent = storedChildName;
+   childrenSelect.appendChild(option);
+ }
+
     // Check if a child is selected
     var selectedChild = childrenSelect.value;
     if (!selectedChild) {
@@ -185,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Store the selected child name in local storage
-    localStorage.setItem("childName", selectedChild);
+    //localStorage.setItem("childName", selectedChild);
 
     // Check if a course is selected
     var selectedCourses = document.querySelectorAll(
@@ -199,40 +210,42 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the selected tutor and prerequisite
     var selectedTutor = tutorsFilter.value;
     var selectedPrerequisite = prerequisitesFilter.value;
-
     // Display information on the page
-    var informationContainer = document.querySelector(".enral");
-    informationContainer.innerHTML = "<h2>Enrollment Information</h2> <br>";
-    informationContainer.innerHTML +=
+    var displayDiv = document.getElementById("enrollmentInfo");
+    displayDiv.innerHTML = "<h2>Enrollment Information</h2> <br>";
+    displayDiv.innerHTML +=
       "<p>Child Name: " + selectedChild + "</p> ";
-    informationContainer.innerHTML += "<p>Selected Courses:</p>";
-    informationContainer.innerHTML += "<ul>";
+      displayDiv.innerHTML += "<p>Selected Courses:</p>";
+      displayDiv.innerHTML += "<ul>";
 
+      // Call the function to adjust the container height
+      adjustContainerHeight();
+    
     // Find and display selected courses and their tutors based on filters
     selectedCourses.forEach(function (selectedCourse) {
       // Get the associated label text
       var label = selectedCourse.closest("label");
       var courseName = label.textContent.trim();
-      console.log(courseName);
 
-      console.log(selectedPrerequisite);
-      courses.forEach(function (course) {
-        if (
-          course.course === courseName &&
-          (selectedTutor === "All" || course.tutor === selectedTutor) &&
-          (selectedPrerequisite === "All" ||
-            course.prerequisite === selectedPrerequisite)
-        ) {
-          console.log("in if");
-          informationContainer.innerHTML +=
-            "<li>" + course.course + " (Tutor: " + course.tutor + ")</li>";
-        }
-      });
+      // Find the tutor for the course
+      var tutor = getTutor(courseName);
+
+      // Display the information in a similar format as the provided code
+      displayDiv.innerHTML +=
+        "<li>- Course: " + courseName + "<br>   Tutor: " + tutor + "</li>";
     });
 
-    informationContainer.innerHTML += "</ul>";
+    displayDiv.innerHTML += "</ul>";
 
     // Clear the form
-    form.reset();
+    // Reset the form
+    document.getElementById("enrollmentForm").reset();
+
   });
+
+  // Function to get the tutor of a course
+  function getTutor(courseName) {
+    var course = courses.find(course => course.course === courseName);
+    return course ? course.tutor : "Unknown";
+  }
 });

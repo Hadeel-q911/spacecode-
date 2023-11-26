@@ -1,4 +1,4 @@
-// Wrap the entire code in a function to avoid global scope pollution
+//Wrap the entire code in a function to avoid global scope pollution
 (function () {
     // Function to submit the form
     function submitForm(event) {
@@ -24,10 +24,25 @@
         const email = document.getElementById('email').value;
 
         // Check for empty fields
-        if (!name || !phone || !dob || !email) {
-            alert('Please fill in all fields.');
+        if (!name ) {
+            alert('Please fill in name fields.');
             return false;
         }
+
+        if ( !phone) {
+            alert('Please fill in phone number fields.');
+            return false;
+
+        }if ( !dob) {
+            alert('Please fill in birday fields.');
+            return false;
+
+        }if ( !email) {
+            alert('Please fill in Email fields.');
+            return false;
+        }
+
+
 
         // Use the existing isNameStartsWithNumber function for name validation
         if (isNameStartsWithNumber(name)) {
