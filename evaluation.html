@@ -2,69 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" >
     <link rel="stylesheet" href="evaluation.css">
-    <link rel="stylesheet" href="Shared.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="darkmode.js"></script>
     <title>Course Evaluation</title>
 </head>
 <body>
-  
     <header>
         <nav>
-           <div class="menu-icon">
-              <span class="fas fa-bars"></span>
-           </div>
-           <div class="logo">
-              <img src="images/logo.png" alt="logo">
-           </div>
-           <div class="nav-items">
-                      <li><a href="parent.html">Parent</a></li>
-                      <li><a href="SpaceCodeAdmins.html">Admin</a></li>
-                      <li><a href="courses.html">Courses</a></li>
-                      <li><a href="TutorsPage.html">Tutours</a></li>
-           </div>
-           <div class="search-icon">
-              <span class="fas fa-search"></span>
-           </div>
-           <div class="cancel-icon">
-              <span class="fas fa-times"></span>
-           </div>
-           <form action="#">
-              <input type="search" class="search-data" placeholder="Search" required>
-              <button type="submit" class="fas fa-search"></button>
-           </form>
+            <div class="logo1">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="parent.html">Parent</a></li>
+                <li><a href="SpaceCodeAdmins.html">Admin</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="TutorsPage.html">Tutors</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
         </nav>
-      </header>
-  
-        <script>
-           const menuBtn = document.querySelector(".menu-icon span");
-           const searchBtn = document.querySelector(".search-icon");
-           const cancelBtn = document.querySelector(".cancel-icon");
-           const items = document.querySelector(".nav-items");
-           const form = document.querySelector("form");
-           menuBtn.onclick = ()=>{
-             items.classList.add("active");
-             menuBtn.classList.add("hide");
-             searchBtn.classList.add("hide");
-             cancelBtn.classList.add("show");
-           }
-           cancelBtn.onclick = ()=>{
-             items.classList.remove("active");
-             menuBtn.classList.remove("hide");
-             searchBtn.classList.remove("hide");
-             cancelBtn.classList.remove("show");
-             form.classList.remove("active");
-             cancelBtn.style.color = "#8a85bc";
-           }
-           searchBtn.onclick = ()=>{
-             form.classList.add("active");
-             searchBtn.classList.add("hide");
-             cancelBtn.classList.add("show");
-           }
-        </script>
+    </header> 
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the default form submission
+
+      const courseSelect = document.getElementById('course');
+      const selectedCourse = courseSelect.options[courseSelect.selectedIndex].text;
+
+      const ratingInputs = document.getElementsByName('rate');
+      let userRating = '';
+      for (const ratingInput of ratingInputs) {
+        if (ratingInput.checked) {
+          userRating = ratingInput.value;
+          break;
+        }
+      }
+
+      if (selectedCourse === '' || userRating === '') {
+        alert('Please select a course and provide a rating.');
+      } else {
+        alert(`Thank you for your feedback! Your rating for course ${selectedCourse} is ${userRating}.`);
+        // Optionally, you can submit the form here using AJAX or perform other actions
+      }
+    });
+  });
+</script>
 
     <div class="banner">
         <h1>It's not just a website<br> It's Space Code!</h1>
@@ -126,19 +116,16 @@
     </fieldset>
     </form>
     </main>
-
     <footer>
-        <div class="footer-container">
-          <div class="left-col">
-            <!---->
-            <h1>Contact Us</h1>
-            <p>Email:<br>SpaceCode@gmail.com</p>
-            <p>Phone:<br> 0505556124</p>
-            <hr>
-            <p class="rights-text">© 2021 Created By <b>FantacyDesigns</b>  All Rights Reserved.</p>
-          </div>
+      <div class="footer-container">
+        <div class="left-col">
+          <h1>Contact Us</h1>
+          <p>Email:<br>SpaceCode@gmail.com</p>
+          <p>Phone:<br> 0505556124</p>
+          <hr>
+          <p class="rights-text">© 2021 Created By <b>FantacyDesigns</b>  All Rights Reserved.</p>
         </div>
-      </footer>
-      <script src="evaluation.js"></script>
+      </div>
+    </footer>
     </body>
     </html>

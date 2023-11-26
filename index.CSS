@@ -14,7 +14,7 @@ button {
   cursor: pointer;
 }
 
-/* Courses Section */
+
 .courses {
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +26,7 @@ button {
 .courses .course {
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: calc(33.33% - 1.25rem); /* Adjusted for responsiveness */
+  width: calc(33.33% - 1.25rem); 
   border-radius: 0.313rem;
   margin-bottom: 1.875rem;
   line-height: 1.25rem;
@@ -46,7 +46,7 @@ button {
   margin-bottom: 1.25rem;
 }
 
-/* Reviews Section */
+
 .ReviewsTitle {
   text-align: center;
   margin-top: 1.875rem;
@@ -57,7 +57,7 @@ button {
 .Review {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: calc(50% - 1.25rem); /* Adjusted for responsiveness */
+  width: calc(50% - 1.25rem); 
   border-radius: 0.313rem;
   margin-right: 1.25rem;
 }
@@ -96,7 +96,7 @@ img {
   margin-bottom: 0.5rem;
 }
 
-/* Courses Title */
+
 .coursesTitle {
   text-align: center;
   margin-top: 1.875rem;
@@ -104,15 +104,15 @@ img {
   margin-bottom: 1.875rem;
 }
 
-/* Responsive Media Queries */
+
 @media screen and (max-width: 767px) {
   .courses .course {
-      width: 100%; /* Full width on smaller screens */
+      width: 100%; 
       margin-right: 0;
   }
 
   .Review {
-      width: 100%; /* Full width on smaller screens */
+      width: 100%; 
       margin-right: 0;
   }
 }
