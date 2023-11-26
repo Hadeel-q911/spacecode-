@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("content_loaded");
 
+
+
+
 // Retrieve stored child names array from local storage
 var storedChildNames = JSON.parse(localStorage.getItem("childNames")) || [];
 
@@ -84,6 +87,7 @@ function adjustContainerHeight() {
     // ... (Your existing course data)
   ];
 
+  
   // Populate filter options for tutors and prerequisites
   var tutorsFilter = document.getElementById("tutor1");
   var prerequisitesFilter = document.getElementById("prerequisite");
@@ -187,10 +191,12 @@ function adjustContainerHeight() {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Check if a child is selected
+  
     var selectedChild = childrenSelect.value;
-    if (!selectedChild) {
-      alert("Please select a child.");
+  
+    // Check if a child is selected
+    if (!selectedChild || selectedChild === "Select") {
+      alert("Please select a valid child.");
       return;
     }
 
