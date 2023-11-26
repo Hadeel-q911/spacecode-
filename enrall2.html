@@ -86,8 +86,8 @@
    <div class="container"> <h1>Course Enrolment</h1> 
      <div class="select">
      <label for="children">Select Child:</label> 
-      <select id="children" name="children"> 
-         <option value="child1">Child 1</option> ;
+      <select id="children" name="children" required> 
+         <option disabled selected>Select</option> ;
          <option value="child2">Child 2</option>
           <option value="child3">Child 3</option> </select></div>
           <br><br> 
@@ -117,17 +117,31 @@
           <label for="courses" id="pcourse">Select Courses:</label>
 
           <br>
-          <div class="Course" id="FilterDiv" style="display: flex; flex-wrap: wrap;">
+          <br>
+          <div class="Course" id="FilterDiv" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
             
           </div>
         
           <br>
-          
+          <div class="step2-box">
+         <div id="enrollmentInofContoiner">
+          <div id="enrollmentInfo" style=" left: 90px;"></div>
+         </div>
+         <br>
+         <div class="button-enralment">
+
+          <button type="submit" class="enrallbut" id="btn">Enroll</button> 
+         <input type="reset" value="Reset" onclick="">
+         </div>
+          </div>
            
-          <button type="submit" class="enrallbut" id="btn">Enroll</button> </div>
+         </div>
      </div>
  </form>
 </div>
+
+
+
 
 <footer>
  <div class="footer-container">
