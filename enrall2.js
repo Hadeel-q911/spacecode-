@@ -1,15 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
   console.log("content_loaded");
 
- 
+// Retrieve stored child names array from local storage
+var storedChildNames = JSON.parse(localStorage.getItem("childNames")) || [];
 
-  function adjustContainerHeight() {
-    var container = document.querySelector(".container");
+// Populate the select element for children
+var childrenSelect = document.getElementById("children");
+
+// Add options for each stored child name
+storedChildNames.forEach(function (storedChildName) {
+  var option = document.createElement("option");
+  option.value = storedChildName;
+  option.textContent = storedChildName;
+  childrenSelect.appendChild(option);
+});
+  
+function adjustContainerHeight() {
+  var container = document.querySelector(".container");
+
+
+
 
     // Increase the container's height by 100 pixels (adjust as needed)
     var currentHeight = container.clientHeight;
-    container.style.height = currentHeight + 200 + "px";
-  }
+    container.style.height = currentHeight + 200 + "px";}
+  
   // Define the courses array
   var courses = [
     {
@@ -172,22 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-
-// Retrieve children's names from local storage
-var childrenData = JSON.parse(localStorage.getItem("children")) || [];
-
-
- // Populate the select element for children
- var childrenSelect = document.getElementById("children");
-
- // If there is a stored child name, add it to the select element
- if (storedChildName) {
-   var option = document.createElement("option");
-   option.value = storedChildName;
-   option.textContent = storedChildName;
-   childrenSelect.appendChild(option);
- }
-
     // Check if a child is selected
     var selectedChild = childrenSelect.value;
     if (!selectedChild) {
@@ -238,9 +237,7 @@ var childrenData = JSON.parse(localStorage.getItem("children")) || [];
     displayDiv.innerHTML += "</ul>";
 
     // Clear the form
-    // Reset the form
-    document.getElementById("enrollmentForm").reset();
-
+    form.reset();
   });
 
   // Function to get the tutor of a course
